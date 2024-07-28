@@ -1,4 +1,4 @@
-package com.example.noteapp
+package com.example.noteapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,11 +6,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.noteapp.R
+import com.example.noteapp.model.Note
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     private var notes = emptyList<Note>()
-    private var onClikedListener : OnItemClikedListener ?= null
+    private var onClikedListener : OnItemClikedListener?= null
 
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.titleTxt)
@@ -40,7 +42,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
     override fun getItemCount() = notes.size
 
-    internal fun setNotes(notes: List<Note> , itemClikedListener: OnItemClikedListener ) {
+    internal fun setNotes(notes: List<Note>, itemClikedListener: OnItemClikedListener) {
         this.notes = notes
         this.onClikedListener = itemClikedListener
         notifyDataSetChanged()

@@ -1,4 +1,4 @@
-package com.example.noteapp
+package com.example.noteapp.view
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.noteapp.model.Note
+import com.example.noteapp.adapter.NoteAdapter
+import com.example.noteapp.viewmodel.NoteViewModel
+import com.example.noteapp.R
 import com.example.noteapp.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
 

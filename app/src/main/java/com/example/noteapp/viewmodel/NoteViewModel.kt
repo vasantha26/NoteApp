@@ -1,8 +1,11 @@
-package com.example.noteapp
+package com.example.noteapp.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import com.example.noteapp.database.NoteDatabase
+import com.example.noteapp.model.Note
+import com.example.noteapp.repos.NoteRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
