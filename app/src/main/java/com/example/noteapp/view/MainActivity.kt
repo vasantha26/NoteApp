@@ -95,6 +95,7 @@ class MainActivity : AppCompatActivity() , NoteAdapter.OnItemClikedListener {
         editTextContent.setText(note.content)
 
 
+
         dialogButton.setOnClickListener {
               saveUpdateNotes(editTextTitle,editTextContent,dialogBuilder,note)
         }
